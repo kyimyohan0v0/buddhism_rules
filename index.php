@@ -1,4 +1,5 @@
 <?php
+
 use KyiMyoHan\BuddhismRules\RulesFactory;
 
 require './vendor/autoload.php';
