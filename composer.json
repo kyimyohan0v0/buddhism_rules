@@ -1,0 +1,26 @@
+{
+    "name": "kyimyohan0v0/buddhism_rules",
+    "description": "To check a sentence with buddhism rules and know what they beleive. Have fun!",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kyi Myo Han",
+            "email": "kyimyohan0v0@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "KyiMyoHan\\BuddhismRules\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KyiMyoHan\\BuddhismRules\\" : "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.1"
+    }
+}
