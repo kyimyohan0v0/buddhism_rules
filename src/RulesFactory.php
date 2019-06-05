@@ -6,23 +6,25 @@ class RulesFactory
 {
     protected $rules = [
         'stole' => 'Will be purnished in hell and stolen again in after life.',
-        'lied'   => 'Will be poured with iron water in hell and his tooth will not be beautiful in after life.'
+        'lied'   => 'Will be poured with iron water in hell and his tooth will not be beautiful in after life.',
     ];
     protected $do_something = '';
     protected $result = 'No Sin';
 
     public function __construct(array $rules = [])
     {
-        if($rules) {
+        if ($rules) {
             $this->rules = $rules;
         }
     }
 
-    public function getRules() {
+    public function getRules()
+    {
         return $this->rules;
     }
 
-    protected function getRule($action) {
+    protected function getRule($action)
+    {
         return $this->rules[$action];
     }
 
@@ -46,25 +48,28 @@ class RulesFactory
         return $this->do_something;
     }
 
-    protected function does_rule_exist($action) {
+    protected function does_rule_exist($action)
+    {
         return array_key_exists($action, $this->getRules());
     }
-    
 
-    public function saw($something) {
+    public function saw($something)
+    {
         $this->setAction($something);
     }
 
-    protected function isItSin($action) {
+    protected function isItSin($action)
+    {
         if ($this->does_rule_exist($action)) {
             $this->setResult($this->getRule($action));
         }
     }
 
-    public function beleives() {
+    public function beleives()
+    {
         $words = $this->letterToArray($this->getAction());
 
-        foreach($words as $action) {
+        foreach ($words as $action) {
             $this->isItSin($action);
         }
 
@@ -72,8 +77,8 @@ class RulesFactory
     }
 
     /** Helper */
-    protected function letterToArray($letter) {
+    protected function letterToArray($letter)
+    {
         return explode(' ', $letter);
     }
-    
 }
