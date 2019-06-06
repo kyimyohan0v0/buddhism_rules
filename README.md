@@ -16,7 +16,8 @@ composer require kyimyohan/buddhism_rules
 use KyiMyoHan\BuddhismRules\RulesFactory;
 
 $buddhism = new RulesFactory();
-$buddhism->saw('He stole a car'); // Will be purnished in hell and stolen again in after life.
+$buddhism->saw('He stole a car'); 
+echo $buddhism->believes(); // Will be purnished in hell and stolen again in after life.
 ```
 
 ## Contributing
